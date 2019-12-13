@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: pl.sda.services.CitizensIT
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.258 s <<< FAILURE! - in pl.sda.services.CitizensIT
+checkConnectionWithDataBase  Time elapsed: 3.252 s  <<< ERROR!
+java.lang.NullPointerException
+	at pl.sda.services.CitizensIT.checkConnectionWithDataBase(CitizensIT.java:19)
+
