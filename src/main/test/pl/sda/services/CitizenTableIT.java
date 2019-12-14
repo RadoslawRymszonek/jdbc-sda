@@ -33,11 +33,18 @@ class CitizenTableIT {
     @Test
     @Timeout(5)
     void checkConnectionWithDataBase() throws SQLException {
+        assertThat(connection).isNotNull();
     }
 
     @Order(2)
     @Test
     void addNewPerson() throws SQLException {
+        String insert ="insert into `persons`" +
+                "(`personId`, `personName`, `addressLine1`, `addressLine2`, `city`, `postalCode`, `country` ) values\n" +
+                "(26, 'Jacek Krótki', 'Kopytkowa 2', 34, 'Baranogrod', '34-283', 'Polska');";
+        final int update = statement.executeUpdate(insert);
+        final int exceptedNumber = 1;
+        assertThat(update).isEqualTo(exceptedNumber);
     }
 
     @Order(3)
@@ -75,5 +82,10 @@ class CitizenTableIT {
     @Order(9)
     @Test
     void removeOnePersonAndRelatedPhone() throws SQLException {
+        String delete = "delete from citizens.persons where personId = 26;";
+        final int update = statement.executeUpdate(delete);
+        final int exceptedNumber = 1;
+        assertThat(update).isEqualTo(exceptedNumber);
+
     }
 }

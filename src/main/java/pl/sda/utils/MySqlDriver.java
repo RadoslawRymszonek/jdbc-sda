@@ -6,8 +6,8 @@ import java.sql.SQLException;
 
 public class MySqlDriver {
     private static String user ="root";
-    private static String url ="jdbc:mysql://172.21.1.1:3306/citizens";
-    private static String password ="passw";
+    private static String url ="jdbc:mysql://localhost:3306/citizens?useTimezone=true&serverTimezone=GMT";
+    private static String password ="skyline";
 
     public MySqlDriver() {
     }

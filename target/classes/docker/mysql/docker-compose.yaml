@@ -11,7 +11,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - /home/krzysiek/volumes/mariaDb:/var/lib/mysql
+      - /home/krzysiek/volumes/mysql:/var/lib/mysql
     networks:
       mysql-network:
         ipv4_address: 172.21.1.1
